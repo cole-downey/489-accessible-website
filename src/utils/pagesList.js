@@ -10,8 +10,8 @@ export const pages = [
         cont: Home,
     },
     {
-        url: '/form',
-        title: "Form",
+        url: '/join',
+        title: "Join",
         index: 1,
         cont: Form,
     },
