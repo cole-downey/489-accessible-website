@@ -15,8 +15,7 @@ const Form = () => {
                 <form className="Form" noValidate autoComplete="off">
                     <div className="Input">
                         <TextField id="name-input" label="Name" aria-label="name-input"
-                            variant="outlined" color="secondary" 
-                            defaultValue="Hello World"/>
+                            variant="outlined" color="secondary" />
                     </div>
                     <div className="Input">
                         <TextField id="name-input" label="Email" aria-label="email-input" 
