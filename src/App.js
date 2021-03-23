@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { pages } from './utils/pagesList';
+import Header from './components/Header';
+import { StylesProvider, Grid, CssBaseline } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StylesProvider injectFirst>
+      <CssBaseline />
+      <Router>
+        <Header pages={pages} />
+        <Grid container justify="center">
+          <Switch>
+            {pages.map((page, key) => (
+              <Route exact path={page.url} key={key} component={page.cont} />
+            ))}
+          </Switch>
+        </Grid>
+      </Router>
+    </StylesProvider>
   );
 }
 
