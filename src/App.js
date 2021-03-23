@@ -14,7 +14,7 @@ function App() {
       <CssBaseline />
       <Router>
         <Header pages={pages} />
-        <Grid container justify="center">
+        <Grid container justify="center" xs={10} className={"Content"}>
           <Switch>
             {pages.map((page, key) => (
               <Route exact path={page.url} key={key} component={page.cont} />

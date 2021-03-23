@@ -1,0 +1,9 @@
+.Form {
+    width: '25ch';
+    align-items: left;
+}
+
+.Input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}

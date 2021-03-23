@@ -73,8 +73,8 @@ const Header = (props) => {
               //indicatorColor="primary"
             >
               {pages.map((page) => (
-                (page.index >= 0) ? <Tab label={<Typography variant="button">{page.title}</Typography>}
-                  to={page.url} key={page.index} component={Link} textColor="primary" /> : null
+                (page.index >= 0) ? <Tab label={<Typography variant="button" >{page.title}</Typography>}
+                  to={page.url} key={page.index} component={Link} textColor="primary" aria-label={page.title}/> : null
               )
               )}
             </Tabs>
